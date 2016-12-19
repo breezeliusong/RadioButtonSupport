@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="RadioButtonSupport.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:RadioButtonSupport"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Margin="5" Text="First Group:" />
+        <RadioButton
+            x:Name="TopButton"
+            Margin="5"
+            Checked="HandleCheck"
+            Content="First Choice"
+            GroupName="First Group"
+            IsChecked="True" />
+        <RadioButton
+            x:Name="MiddleButton"
+            Margin="5"
+            Checked="HandleCheck"
+            Click="MiddleButton_Click"
+            Content="Second Choice"
+            GroupName="First Group" />
+        <Frame
+            Name="myFrame"
+            Width="100"
+            Height="200" />
+    </StackPanel>
+</Page>
